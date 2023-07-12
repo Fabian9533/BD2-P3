@@ -21,10 +21,6 @@
 - [Experimentación](#Experimentación)
    * [Análisis y discusión](#Análisis-y-discusión)
 
-Procedimiento general:
-- Extracción de caracteristica
-- Indexacion de vectores caracteristicos para busquedas eficientes
-- Algoritmo de búsqueda KNN
 
 # Cuadro de Actividades:
 
