@@ -105,8 +105,10 @@
 - Se utiliza bloques para procesar las imagenes. Cada 1000 imagenes procesadas se sube al archivo en memoria secundaria y se limpia el diccionaria para mejorar el rendimiento y la velocidad de procesamiento. Aproximadamente toma 10 a 15 min.
 
 ### Sequential
-- Para el **`range_search()`**, se utilizó comparaciones con las distancias euclidianas obtenidas por **`numpy.linalg.norm()`**, con una busqueda secquencial en todas las imagenes procesadas de la colección.
-- Para el **`knn_search()`**, se utilizó una cola de prioridad. En la que insertamos todos los elementos de la colección (ordenandolos por su distancia) y seleccionamos los K elementos con las distancias más pequeñas a la imagen de entrada. (query)
+- Para el **`range_search()`**, realiza una búsqueda por rango en un diccionario de rostros codificados. Primero, carga la imagen de entrada y obtiene las codificaciones del rostro utilizando la biblioteca face_recognition. Luego, compara estas codificaciones con las del diccionario indexado utilizando operaciones de álgebra lineal de la biblioteca numpy. Si la distancia entre las codificaciones es menor que un radio de búsqueda dado, se considera que los rostros son similares y se agregan a los resultados de búsqueda.
+
+- Para el **`knn_search()`**, ealiza una búsqueda k-NN en el diccionario de rostros codificados. Al igual que en la búsqueda por rango, carga la imagen de entrada y obtiene las codificaciones del rostro. Luego, calcula la distancia entre las codificaciones y las almacena en una cola de prioridad. La cola de prioridad se ordena en función de la distancia, de modo que los vecinos más cercanos tienen una mayor prioridad. Finalmente, extrae los k vecinos más cercanos de la cola de prioridad y los devuelve como resultados de búsqueda.
+
 
 ### R-tree
 - Para aprovechar al máximo el R-tree en Python, utilizamos *`idx.intersect`* y   *`idx.nearest`* * para la búsqueda por rango y para encontrar los vecinos más cercanos (knn), respectivamente. Aquí, idx representa el índice que se usa de manera adecuada.
