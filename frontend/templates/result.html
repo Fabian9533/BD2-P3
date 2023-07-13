@@ -25,12 +25,12 @@
         <br>
         {% endif %}
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <img width="100" height="500" src="{{url_for('static', filename='/backend/test_images/' + original)}}"  alt="{{original}}">
+            <img width="100" height="500" src="{{url_for('static', filename='test_images/' + original)}}"  alt="{{original}}">
             <h3 class="tiempo">Tiempo: {{tiempo}} ms</h3>
             {% for i in data %}
                 <div class="col">
                     <div class="card h-100">
-                      <img src="{{url_for('static', filename='backend/dataset/' + i[1])}}" class="card-img-top" alt="{{i[0]}}">
+                      <img src="{{url_for('static', filename='dataset/' + i[1])}}" class="card-img-top" alt="{{i[0]}}">
                       <div class="card-body">
                         <h5 class="card-title-dist">Distance: {{i[0]}} </h5>
                         <h5 class="card-title">File name: {{i[1]}} </h5>
