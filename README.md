@@ -125,7 +125,11 @@
 
 ## Experimentación
 - Para testear las implementaciones, se usa una imagen de Tom Cruise como query. Mostraremos el tiempo que demora para 100,200,400,800,1600,3200,6400,12800 datos.
+
 ![image](https://github.com/Fabian9533/BD2-P3/assets/56895239/31ee48cf-c208-4f93-92d8-f77477a91e03)
+
+![image](https://github.com/Fabian9533/BD2-P3/assets/56895239/e1c4ef67-21db-4613-a63b-05fc85a4361a)
+
 
 <table>
   <tbody>
