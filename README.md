@@ -132,7 +132,7 @@
       <th></th>
       <th align="center">KNN-secuencial</th>
        <th>KNN-RTree</th>
-       <th>KNN-HighD</th>
+       <th>KDTree</th>
     </tr>
     <tr>
       <td>N = 100</td>
