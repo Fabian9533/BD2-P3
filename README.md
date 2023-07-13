@@ -124,7 +124,66 @@
 - La ampliación del número de dimensiones puede intensificar considerablemente muchos de los desafíos que ya se presentan en dimensiones menores, un fenómeno conocido como la "maldición de la dimensionalidad". Esto es especialmente evidente al calcular los KNN o vecinos más cercanos, ya que las distancias generadas pueden hacer que los valores parezcan similares. Una solución para mitigar este problema es disponer de un mayor volumen de datos y reducir la cantidad de dimensiones.
 
 ## Experimentación
-- Para testear las implementaciones, se usa una imagen de Salma_Hayeks como query. Mostraremos el tiempo que demora para 100,200,400,800,1600,3200,6400,12800 datos.
+- Para testear las implementaciones, se usa una imagen de Tom Cruise como query. Mostraremos el tiempo que demora para 100,200,400,800,1600,3200,6400,12800 datos.
+
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th align="center">KNN-secuencial</th>
+       <th>KNN-RTree</th>
+       <th>KNN-HighD</th>
+    </tr>
+    <tr>
+      <td>N = 100</td>
+      <td align="center"></td>
+       <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+    <tr>
+      <td>N = 200</td>
+      <td align="center"></td>
+       <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+    <tr>
+      <td>N = 400</td>
+      <td align="center"></td>
+       <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+    <tr>
+      <td>N = 800</td>
+      <td align="center"></td>
+       <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+     <tr>
+      <td>N = 1600</td>
+      <td align="center"></td>
+         <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+     <tr>
+      <td>N = 3200</td>
+      <td align="center"></td>
+         <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+     <tr>
+      <td>N = 6400</td>
+      <td align="center"></td>
+         <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+     <tr>
+      <td>N = 12800</td>
+      <td align="center"></td>
+         <td align="center"></td>
+       <td align="center"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Análisis y discusión
 - Los tests demuestran que las consultas indexadas en Rtree y KDTree son considerablemente más eficaces que las consultas secuenciales, lo que significa que no nos vemos afectados por la maldición de la dimensionalidad en comparación con las implementaciones secuenciales. Finalmente, hemos logrado implementar el proyecto que devuelve los rostros más similares en nuestra base de datos para cualquier consulta introducida.
